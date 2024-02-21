@@ -194,3 +194,17 @@ func Errorf(template string, args ...interface{}) {
 	}
 	Sugar.Errorf(template, args...)
 }
+
+func Fatal(args ...interface{}) {
+	if Sugar == nil {
+		Default()
+	}
+	Sugar.Fatal(args...)
+}
+
+func Fatalf(template string, args ...interface{}) {
+	if Sugar == nil {
+		Default()
+	}
+	Sugar.Fatalf(template, args...)
+}
