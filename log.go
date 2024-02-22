@@ -181,6 +181,20 @@ func Debugf(template string, args ...interface{}) {
 	Sugar.Debugf(template, args...)
 }
 
+func Warn(args ...interface{}) {
+	if Sugar == nil {
+		Default()
+	}
+	Sugar.Warn(args...)
+}
+
+func Warnf(template string, args ...interface{}) {
+	if Sugar == nil {
+		Default()
+	}
+	Sugar.Warnf(template, args...)
+}
+
 func Error(args ...interface{}) {
 	if Sugar == nil {
 		Default()
